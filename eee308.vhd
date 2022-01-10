@@ -8,14 +8,14 @@ entity eee308 is
 generic(clock_image_Width  : INTEGER := 226; -- Width of image in memory
         clock_image_Height : INTEGER := 223; -- Height of image in memory
 	
-		  sec_hand_image_Width  : INTEGER := 33; -- Width of image in memory
-        sec_hand_image_Height : INTEGER := 201; -- Height of image in memory
+		  sec_hand_image_Width  : INTEGER := 1; -- Width of image in memory
+        sec_hand_image_Height : INTEGER := 100; -- Height of image in memory
 		  
-		  min_hand_image_Width  : INTEGER := 40; -- Width of image in memory
-        min_hand_image_Height : INTEGER := 131; -- Height of image in memory
+		  min_hand_image_Width  : INTEGER := 1; -- Width of image in memory
+        min_hand_image_Height : INTEGER := 80; -- Height of image in memory
 		  
-		  hour_hand_image_Width  : INTEGER := 132; -- Width of image in memory
-        hour_hand_image_Height : INTEGER := 288; -- Height of image in memory
+		  hour_hand_image_Width  : INTEGER := 1; -- Width of image in memory
+        hour_hand_image_Height : INTEGER := 60; -- Height of image in memory
 		  
         dataSize     : INTEGER := 11;  -- MSB of each row in memory
 		  --clock and hour
@@ -24,7 +24,6 @@ generic(clock_image_Width  : INTEGER := 226; -- Width of image in memory
 		  addressSize2  : integer := 12);
 
 port(clk50MHz  : in std_logic;
-     SW	:in std_logic_vector(9 downto 0);
      r         : out std_logic_vector(3 downto 0);
      g         : out std_logic_vector(3 downto 0);
      b         : out std_logic_vector(3 downto 0);
@@ -33,7 +32,7 @@ port(clk50MHz  : in std_logic;
 
 end entity eee308;
 
-architecture display of ee3308 is
+architecture display of eee308 is
 -- Parameters for a 640x480 display
 	constant hfp480p  : integer   := 16;
 	constant hsp480p  : integer   := 96;
@@ -101,23 +100,27 @@ begin
                                   clock    => sync2_clk,
                                   q        => raw_data_sec);
 											 
-	imRead: work.minutes_hand port map(address => data_address2, ----minutes hand
+	imRead_min: work.minutes_hand port map(address => data_address2, ----minutes hand
                                   clock    => sync2_clk,
                                   q        => raw_data_min);
 											 
-	imRead: work.hour_hand port map(address => data_address, ----hour hand
+	imRead_hr: work.minutes_hand port map(address => data_address2, ----minutes hand
                                   clock    => sync2_clk,
                                   q        => raw_data_hr);
+											 
+--	imRead_hr: work.hour_hand port map(address => data_address, ----hour hand
+--                                  clock    => sync2_clk,
+--                                  q        => raw_data_hr);
 											 
 	process(sync2_clk)
 	
 	--clock positining details
 	variable hcentre            : integer := hfp + hsp + hbp + (hva/2);
 	variable vcentre            : integer := vfp + vsp + vbp + (vva/2);
-	variable image_hstart       : integer := 460;	
-	variable image_hstop        : integer := image_hstart + image_Width;
-	variable image_vstart       : integer := 260;
-	variable image_vstop        : integer := image_vstart + image_Height;
+	variable image_hstart       : integer := 370;	
+	variable image_hstop        : integer := image_hstart + clock_image_Width;
+	variable image_vstart       : integer := 160;
+	variable image_vstop        : integer := image_vstart + clock_image_Height;
 	variable image_pixel_col    : integer := 0;
 	variable image_pixel_row    : integer := 0;
 	variable image_pixel_number : integer := 0;
@@ -126,10 +129,10 @@ begin
 	--hr
 	variable hr_hcentre            : integer := hfp + hsp + hbp + (hva/2);
 	variable hr_vcentre            : integer := vfp + vsp + vbp + (vva/2);
-	variable hr_image_hstart       : integer := 230;	
-	variable hr_image_hstop        : integer := fr1_image_hstart + fr1_image_Width;
-	variable hr_image_vstart       : integer := 90;
-	variable hr_image_vstop        : integer := fr1_image_vstart + fr1_image_Height;
+	variable hr_image_hstart       : integer := 483;	
+	variable hr_image_hstop        : integer := hr_image_hstart + hour_hand_image_Width;
+	variable hr_image_vstart       : integer := 225;
+	variable hr_image_vstop        : integer := hr_image_vstart + hour_hand_image_Height;
 	variable hr_image_pixel_col    : integer := 0;
    variable hr_image_pixel_row    : integer := 0;
 	variable hr_image_pixel_number : integer := 0;
@@ -137,10 +140,10 @@ begin
 	--min
 	variable min_hcentre            : integer := hfp + hsp + hbp + (hva/2);
 	variable min_vcentre            : integer := vfp + vsp + vbp + (vva/2);
-	variable min_image_hstart       : integer := 230;	
-	variable min_image_hstop        : integer := fr1_image_hstart + fr1_image_Width;
-	variable min_image_vstart       : integer := 90;
-	variable min_image_vstop        : integer := fr1_image_vstart + fr1_image_Height;
+	variable min_image_hstart       : integer := 483;	
+	variable min_image_hstop        : integer := min_image_hstart + min_hand_image_Width;
+	variable min_image_vstart       : integer := 200;
+	variable min_image_vstop        : integer := min_image_vstart + min_hand_image_Height;
 	variable min_image_pixel_col    : integer := 0;
    variable min_image_pixel_row    : integer := 0;
 	variable min_image_pixel_number : integer := 0;
@@ -148,17 +151,17 @@ begin
 	--sec
 	variable sec_hcentre            : integer := hfp + hsp + hbp + (hva/2);
 	variable sec_vcentre            : integer := vfp + vsp + vbp + (vva/2);
-	variable sec_image_hstart       : integer := 230;	
-	variable sec_image_hstop        : integer := fr1_image_hstart + fr1_image_Width;
-	variable sec_image_vstart       : integer := 90;
-	variable sec_image_vstop        : integer := fr1_image_vstart + fr1_image_Height;
+	variable sec_image_hstart       : integer := 483;	
+	variable sec_image_hstop        : integer := sec_image_hstart + sec_hand_image_Width;
+	variable sec_image_vstart       : integer := 205;
+	variable sec_image_vstop        : integer := sec_image_vstart + sec_hand_image_Height;
 	variable sec_image_pixel_col    : integer := 0;
    variable sec_image_pixel_row    : integer := 0;
 	variable sec_image_pixel_number : integer := 0;
 	
 	variable mem_Address_clk        : unsigned(addressSize downto 0) := (others=>'0'); ---memory for clock image
 	variable mem_Address_min       : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for minutes image
-	variable mem_Address_hr       : unsigned(addressSize downto 0) := (others=>'0'); ---memory for hour image
+	variable mem_Address_hr       : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for hour image
 	variable mem_Address_sec        : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for sec image
 	
 	--	variable imgOffset          : integer := 4;
@@ -213,9 +216,9 @@ begin
 			if ((hposition >= image_hstart and hposition <= image_hstop) and (vposition >= image_vstart and vposition <= image_vstop)) then
 				image_pixel_col := hposition - image_hstart;
 				image_pixel_row := vposition - image_vstart;
-				image_pixel_number := image_pixel_col + image_pixel_row*image_Width;
-				mem_Address  := to_unsigned(image_pixel_number, mem_Address'length);
-				data_address <= std_logic_vector(mem_Address);
+				image_pixel_number := image_pixel_col + image_pixel_row*clock_image_Width;
+				mem_Address_clk  := to_unsigned(image_pixel_number, mem_Address_clk'length);
+				data_address <= std_logic_vector(mem_Address_clk);
 				r <= raw_data_clk(11 downto 8);
 				g <= raw_data_clk(7 downto 4);
 				b <= raw_data_clk(3 downto 0);
@@ -231,9 +234,9 @@ begin
 		if ((hposition >= hr_image_hstart and hposition <= hr_image_hstop) and (vposition >= hr_image_vstart and vposition <= hr_image_vstop)) then
 					hr_image_pixel_col := hposition - hr_image_hstart;
 					hr_image_pixel_row := vposition - hr_image_vstart;
-					hr_image_pixel_number := hr_image_pixel_col + hr_image_pixel_row*hr_image_Width;
+					hr_image_pixel_number := hr_image_pixel_col + hr_image_pixel_row*hour_hand_image_Width;
 					mem_Address_hr  := to_unsigned(hr_image_pixel_number, mem_Address_hr'length);
-					data_address <= std_logic_vector(mem_Address_hr);
+					data_address2 <= std_logic_vector(mem_Address_hr);
 					r <= raw_data_hr(11 downto 8);
 					g <= raw_data_hr(7 downto 4);
 					b <= raw_data_hr(3 downto 0);
@@ -244,7 +247,7 @@ begin
 	if ((hposition >= min_image_hstart and hposition <= min_image_hstop) and (vposition >= min_image_vstart and vposition <= min_image_vstop)) then
 					min_image_pixel_col := hposition - min_image_hstart;
 					min_image_pixel_row := vposition - min_image_vstart;
-					min_image_pixel_number := min_image_pixel_col + min_image_pixel_row*min_image_Width;
+					min_image_pixel_number := min_image_pixel_col + min_image_pixel_row*min_hand_image_Width;
 					mem_Address_min  := to_unsigned(min_image_pixel_number, mem_Address_min'length);
 					data_address2 <= std_logic_vector(mem_Address_min);
 					r <= raw_data_min(11 downto 8);
@@ -256,7 +259,7 @@ begin
 		if ((hposition >= sec_image_hstart and hposition <= sec_image_hstop) and (vposition >= sec_image_vstart and vposition <= sec_image_vstop)) then
 					sec_image_pixel_col := hposition - sec_image_hstart;
 					sec_image_pixel_row := vposition - sec_image_vstart;
-					sec_image_pixel_number := sec_image_pixel_col + sec_image_pixel_row*sec_image_Width;
+					sec_image_pixel_number := sec_image_pixel_col + sec_image_pixel_row*sec_hand_image_Width;
 					mem_Address_sec  := to_unsigned(sec_image_pixel_number, mem_Address_sec'length);
 					data_address2 <= std_logic_vector(mem_Address_sec);
 					r <= raw_data_sec(11 downto 8);
