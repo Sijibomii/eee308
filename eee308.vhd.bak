@@ -5,23 +5,14 @@ use ieee.numeric_std.all;
 entity eee308 is
 --generics are a local form of constant which 
 --can be assigned a value when we instantiate a component
-generic(clock_image_Width  : INTEGER := 226; -- Width of image in memory
-        clock_image_Height : INTEGER := 223; -- Height of image in memory
+generic(image_Width  : INTEGER := 20; -- Width of image in memory
+        image_Height : INTEGER := 20; -- Height of image in memory
 	
-		  sec_hand_image_Width  : INTEGER := 33; -- Width of image in memory
-        sec_hand_image_Height : INTEGER := 201; -- Height of image in memory
-		  
-		  min_hand_image_Width  : INTEGER := 40; -- Width of image in memory
-        min_hand_image_Height : INTEGER := 131; -- Height of image in memory
-		  
-		  hour_hand_image_Width  : INTEGER := 132; -- Width of image in memory
-        hour_hand_image_Height : INTEGER := 288; -- Height of image in memory
+		  fr1_image_Width  : INTEGER := 20; -- Width of image in memory
+        fr1_image_Height : INTEGER := 20; -- Height of image in memory
 		  
         dataSize     : INTEGER := 11;  -- MSB of each row in memory
-		  --clock and hour
-        addressSize  : integer := 15;
-		  --minutes and second
-		  addressSize2  : integer := 12);
+        addressSize  : integer := 15 );
 
 port(clk50MHz  : in std_logic;
      SW	:in std_logic_vector(9 downto 0);
