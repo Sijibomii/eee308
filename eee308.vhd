@@ -159,11 +159,111 @@ begin
 	variable mem_Address_clk        : unsigned(addressSize downto 0) := (others=>'0'); ---memory for clock image
 	variable mem_Address_min       : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for minutes image
 	variable mem_Address_hr       : unsigned(addressSize downto 0) := (others=>'0'); ---memory for hour image
-	variable mem_Address_min        : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for sec image
+	variable mem_Address_sec        : unsigned(addressSize2 downto 0) := (others=>'0'); ---memory for sec image
 	
 	--	variable imgOffset          : integer := 4;
 	variable increx1  : integer := 1;
 	begin
-	
+	if rising_edge(sync2_clk) then
+			-- Always increment the horizontal position counter with each active clock pulse
+			hposition <= hposition + 1;
+			
+			-- When horizontal position counter gets to the last pixel in a row, go back
+			-- to zero and increment the vertical counter (i.e. go to start of next line)
+			if hposition >= (hfp+hsp+hbp+hva) then
+				hposition <= 0;
+				-- when vertical position counter gets to the end of rows, go back to the
+				-- start of the first row
+				if vposition >= (vfp+vsp+vbp+vva) then
+					vposition <= 0;
+				else
+					vposition <= vposition + 1;
+				end if;
+			end if;
+			
+			
+			-- Generate horizontal synch pulse whenever the hposition is between the front
+			-- porch and the back porch
+			if (hposition >= hfp) and (hposition < (hfp+hsp)) then
+				hsync <= '0';
+			else
+				hsync <= '1';
+			end if;
+
+			-- Generate vertical synch pulse whenever the vposition is between the front
+			-- porch and the back porch
+			if (vposition >= vfp) and (vposition < (vfp+vsp)) then
+				vsync <= '0';
+			else
+				vsync <= '1';
+			end if;
+			
+			
+			
+			
+			-- Now to put things up on the display
+			-- Where do we want to put things?
+			-- Let's put the image in our memory in the centre of the screen starting
+			-- from the 100th row. We first determine the bounds in which the image will be
+			-- displayed and then tell it what memory address to read from in order to 
+			-- display the contents of the memory onto the display.
+			-- The central pixel of the visible area is 
+			
+----------------clock image ---------------------------------------------------------
+			if ((hposition >= image_hstart and hposition <= image_hstop) and (vposition >= image_vstart and vposition <= image_vstop)) then
+				image_pixel_col := hposition - image_hstart;
+				image_pixel_row := vposition - image_vstart;
+				image_pixel_number := image_pixel_col + image_pixel_row*image_Width;
+				mem_Address  := to_unsigned(image_pixel_number, mem_Address'length);
+				data_address <= std_logic_vector(mem_Address);
+				r <= raw_data_clk(11 downto 8);
+				g <= raw_data_clk(7 downto 4);
+				b <= raw_data_clk(3 downto 0);
+			else
+			   r <= x"2";
+		      g <= x"2";
+		      b <= x"2";
+			end if;
+			
+			
+------------------------------hour hand ----------------------------------------------------
+
+		if ((hposition >= hr_image_hstart and hposition <= hr_image_hstop) and (vposition >= hr_image_vstart and vposition <= hr_image_vstop)) then
+					hr_image_pixel_col := hposition - hr_image_hstart;
+					hr_image_pixel_row := vposition - hr_image_vstart;
+					hr_image_pixel_number := hr_image_pixel_col + hr_image_pixel_row*hr_image_Width;
+					mem_Address_hr  := to_unsigned(hr_image_pixel_number, mem_Address_hr'length);
+					data_address <= std_logic_vector(mem_Address_hr);
+					r <= raw_data_hr(11 downto 8);
+					g <= raw_data_hr(7 downto 4);
+					b <= raw_data_hr(3 downto 0);
+													 
+					end if;
+------------------------------minute hand------------------------------------------
+
+	if ((hposition >= min_image_hstart and hposition <= min_image_hstop) and (vposition >= min_image_vstart and vposition <= min_image_vstop)) then
+					min_image_pixel_col := hposition - min_image_hstart;
+					min_image_pixel_row := vposition - min_image_vstart;
+					min_image_pixel_number := min_image_pixel_col + min_image_pixel_row*min_image_Width;
+					mem_Address_min  := to_unsigned(min_image_pixel_number, mem_Address_min'length);
+					data_address2 <= std_logic_vector(mem_Address_min);
+					r <= raw_data_min(11 downto 8);
+					g <= raw_data_min(7 downto 4);
+					b <= raw_data_min(3 downto 0);
+													 
+					end if;
+-----------------------------seconds hand------------------------------------------------
+		if ((hposition >= sec_image_hstart and hposition <= sec_image_hstop) and (vposition >= sec_image_vstart and vposition <= sec_image_vstop)) then
+					sec_image_pixel_col := hposition - sec_image_hstart;
+					sec_image_pixel_row := vposition - sec_image_vstart;
+					sec_image_pixel_number := sec_image_pixel_col + sec_image_pixel_row*sec_image_Width;
+					mem_Address_sec  := to_unsigned(sec_image_pixel_number, mem_Address_sec'length);
+					data_address2 <= std_logic_vector(mem_Address_sec);
+					r <= raw_data_sec(11 downto 8);
+					g <= raw_data_sec(7 downto 4);
+					b <= raw_data_sec(3 downto 0);
+													 
+					end if;
+		end if;
 	end process;
 end architecture display;
