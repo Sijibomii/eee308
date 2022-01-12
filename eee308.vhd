@@ -1,7 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.math_real.all;
+library std;
+use ieee.std_logic_textio.all;
+use std.textio.all;
 
+
+--6 degrees per second 0.10472 radian
 entity eee308 is
 --generics are a local form of constant which 
 --can be assigned a value when we instantiate a component
@@ -144,6 +150,7 @@ begin
 	variable min_image_hstop        : integer := min_image_hstart + min_hand_image_Width;
 	variable min_image_vstart       : integer := 200;
 	variable min_image_vstop        : integer := min_image_vstart + min_hand_image_Height;
+	--variable min_image_pixel_col    : real:=0.0;
 	variable min_image_pixel_col    : integer := 0;
    variable min_image_pixel_row    : integer := 0;
 	variable min_image_pixel_number : integer := 0;
@@ -245,8 +252,12 @@ begin
 ------------------------------minute hand------------------------------------------
 
 	if ((hposition >= min_image_hstart and hposition <= min_image_hstop) and (vposition >= min_image_vstart and vposition <= min_image_vstop)) then
+					--this is what to rotate
+					
+					--min_image_pixel_col := sin(MATH_2_PI*(hposition - min_image_hstart));
 					min_image_pixel_col := hposition - min_image_hstart;
 					min_image_pixel_row := vposition - min_image_vstart;
+					--------------------------------
 					min_image_pixel_number := min_image_pixel_col + min_image_pixel_row*min_hand_image_Width;
 					mem_Address_min  := to_unsigned(min_image_pixel_number, mem_Address_min'length);
 					data_address2 <= std_logic_vector(mem_Address_min);
