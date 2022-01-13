@@ -48,6 +48,76 @@ architecture display of eee308 is
 	constant vsp480p  : integer   := 2;
 	constant vbp480p  : integer   := 33;
 	constant vva480p  : integer   := 480;
+	
+--for each second store the starting and ending point of each hand
+---- STORES THE LIST OF COLORED PIXELS FOR EACH POSITION
+-------------------------TYPES--------------------------------------------------
+--set the number of pixels for each hand 50 for now
+	type SEC_X is array (0 to 50) of integer range 0 to 640;
+	type SEC_Y is array (0 to 50) of integer range 0 to 480;
+
+	type MIN_X is array (0 to 50) of integer range 0 to 640;
+	type MIN_Y is array (0 to 50) of integer range 0 to 480;
+
+	type HR_X is array (0 to 50) of integer range 0 to 640;
+	type HR_Y is array (0 to 50) of integer range 0 to 480;
+
+	type RETURN_ARRAY is array (0 to 1) of integer;--0 x, y 1
+
+---------------------FUNCTION---------------------------------------------------
+function getNextCoord(x0 : integer := 0;
+                        y0 : integer := 0;
+								x1 : integer := 0;
+								y1 : integer := 0) return RETURN_ARRAY is
+		signal sx_p : integer;
+		signal sy_p : integer;
+      variable dy: integer;
+		variable sx: integer;
+		variable sy: integer;
+		variable err : integer := 0;
+		variable e2  : integer := 0;
+    begin
+        if x1-x0 > 0 then
+			dx := x1-x0;
+			sx := 1;
+		else
+			dx := x0-x1;
+			sx := -1;
+		end if;
+		
+		if y1-y0 > 0 then
+			dy := y1-y0;
+			sy := 1;
+		else
+			dy := y0-y1;
+			sy := -1;
+		end if;
+		err:= dx+dy;
+		e2 := err+err;
+		if (e2 >= dy) then 
+		sx_p <= x0 + sx;
+		sy_p <= y0;
+		end if;
+		if (e2 <= dx) then
+		 sy_p <= y0 + sy;
+		sx_p <= x0;
+		end if;
+        return (sx_p, sy_p);
+    end function;
+
+-----------------------------seconds---------------------------------------------------
+	--every one second get the current 
+	--variable CURR: INT_ARRAY(0 to 9);
+
+--for I in 0 to 50 loop
+--	--check if I is one
+--	if (I = 1) then
+--	
+--	else
+--	end if;
+--end loop;
+	
+	
 
 -- Signals that will hold the front port etc that we will acutally use
 	signal   hfp      : integer; -- horizontal front porch
@@ -84,6 +154,7 @@ architecture display of eee308 is
 	signal raw_data_min     : std_logic_vector(dataSize downto 0)    := (others=>'0');
 	
 begin
+	
 
 	sync2_clk<= clk25   ;
 	hfp      <= hfp480p ;
@@ -234,8 +305,8 @@ begin
 		      g <= x"2";
 		      b <= x"2";
 			end if;
-			
-			
+
+--each second, generate array of all pixel that should be coloured black
 ------------------------------hour hand ----------------------------------------------------
 
 		if ((hposition >= hr_image_hstart and hposition <= hr_image_hstop) and (vposition >= hr_image_vstart and vposition <= hr_image_vstop)) then
@@ -261,6 +332,7 @@ begin
 					min_image_pixel_number := min_image_pixel_col + min_image_pixel_row*min_hand_image_Width;
 					mem_Address_min  := to_unsigned(min_image_pixel_number, mem_Address_min'length);
 					data_address2 <= std_logic_vector(mem_Address_min);
+					
 					r <= raw_data_min(11 downto 8);
 					g <= raw_data_min(7 downto 4);
 					b <= raw_data_min(3 downto 0);

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eee308
-Tue Jan 11 00:54:36 2022
+Thu Jan 13 12:45:59 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 11 00:54:36 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 13 12:45:59 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; eee308                                      ;
 ; Top-level Entity Name              ; eee308                                      ;
@@ -1196,7 +1196,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:12     ;
 +----------------+--------------+
 
 
@@ -1206,7 +1206,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 11 00:53:38 2022
+    Info: Processing started: Thu Jan 13 12:44:25 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eee308 -c eee308
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1225,64 +1225,67 @@ Info (12021): Found 2 design units, including 1 entities, in source file minutes
 Info (12021): Found 2 design units, including 1 entities, in source file seconds_hand.vhd
     Info (12022): Found design unit 1: seconds_hand-SYN File: C:/intelFPGA_lite/eee308/seconds_hand.vhd Line: 52
     Info (12023): Found entity 1: seconds_hand File: C:/intelFPGA_lite/eee308/seconds_hand.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file lines.vhd
+    Info (12022): Found design unit 1: lines-datapath File: C:/intelFPGA_lite/eee308/lines.vhd Line: 11
+    Info (12023): Found entity 1: lines File: C:/intelFPGA_lite/eee308/lines.vhd Line: 4
 Info (12127): Elaborating entity "eee308" for the top level hierarchy
-Warning (10639): VHDL warning at eee308.vhd(124): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 124
-Warning (10639): VHDL warning at eee308.vhd(125): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 125
-Warning (10639): VHDL warning at eee308.vhd(136): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 136
 Warning (10639): VHDL warning at eee308.vhd(137): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
-Warning (10639): VHDL warning at eee308.vhd(147): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 147
-Warning (10639): VHDL warning at eee308.vhd(148): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 148
-Warning (10639): VHDL warning at eee308.vhd(159): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 159
+Warning (10639): VHDL warning at eee308.vhd(138): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
+Warning (10639): VHDL warning at eee308.vhd(149): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
+Warning (10639): VHDL warning at eee308.vhd(150): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
 Warning (10639): VHDL warning at eee308.vhd(160): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at eee308.vhd(124): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at eee308.vhd(124): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at eee308.vhd(124): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at eee308.vhd(124): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at eee308.vhd(125): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at eee308.vhd(125): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at eee308.vhd(125): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 125
-Warning (10492): VHDL Process Statement warning at eee308.vhd(125): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 125
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(126): used initial value expression for variable "image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 126
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(127): used initial value expression for variable "image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 127
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(128): used initial value expression for variable "image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 128
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(129): used initial value expression for variable "image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at eee308.vhd(136): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at eee308.vhd(136): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at eee308.vhd(136): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at eee308.vhd(136): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 136
-Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
-Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(138): used initial value expression for variable "hr_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(139): used initial value expression for variable "hr_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 139
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(140): used initial value expression for variable "hr_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 140
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(141): used initial value expression for variable "hr_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at eee308.vhd(147): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at eee308.vhd(147): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at eee308.vhd(147): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at eee308.vhd(147): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at eee308.vhd(148): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at eee308.vhd(148): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at eee308.vhd(148): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 148
-Warning (10492): VHDL Process Statement warning at eee308.vhd(148): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 148
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(149): used initial value expression for variable "min_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(150): used initial value expression for variable "min_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(151): used initial value expression for variable "min_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 151
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(152): used initial value expression for variable "min_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 152
-Warning (10492): VHDL Process Statement warning at eee308.vhd(159): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at eee308.vhd(159): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at eee308.vhd(159): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at eee308.vhd(159): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 159
-Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
-Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(161): used initial value expression for variable "sec_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(162): used initial value expression for variable "sec_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 162
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(163): used initial value expression for variable "sec_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 163
-Warning (10542): VHDL Variable Declaration warning at eee308.vhd(164): used initial value expression for variable "sec_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 164
-Info (12128): Elaborating entity "sync_clk" for hierarchy "sync_clk:disp_clk" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 98
+Warning (10639): VHDL warning at eee308.vhd(161): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
+Warning (10639): VHDL warning at eee308.vhd(172): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 172
+Warning (10639): VHDL warning at eee308.vhd(173): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at eee308.vhd(137): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at eee308.vhd(138): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at eee308.vhd(138): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at eee308.vhd(138): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at eee308.vhd(138): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 138
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(139): used initial value expression for variable "image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 139
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(140): used initial value expression for variable "image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 140
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(141): used initial value expression for variable "image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 141
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(142): used initial value expression for variable "image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 142
+Warning (10492): VHDL Process Statement warning at eee308.vhd(149): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at eee308.vhd(149): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at eee308.vhd(149): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at eee308.vhd(149): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 149
+Warning (10492): VHDL Process Statement warning at eee308.vhd(150): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at eee308.vhd(150): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at eee308.vhd(150): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at eee308.vhd(150): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 150
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(151): used initial value expression for variable "hr_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 151
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(152): used initial value expression for variable "hr_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 152
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(153): used initial value expression for variable "hr_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 153
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(154): used initial value expression for variable "hr_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 154
+Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at eee308.vhd(160): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 160
+Warning (10492): VHDL Process Statement warning at eee308.vhd(161): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at eee308.vhd(161): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at eee308.vhd(161): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
+Warning (10492): VHDL Process Statement warning at eee308.vhd(161): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 161
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(162): used initial value expression for variable "min_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 162
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(163): used initial value expression for variable "min_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 163
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(164): used initial value expression for variable "min_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 164
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(165): used initial value expression for variable "min_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 165
+Warning (10492): VHDL Process Statement warning at eee308.vhd(172): signal "hfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at eee308.vhd(172): signal "hsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at eee308.vhd(172): signal "hbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at eee308.vhd(172): signal "hva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at eee308.vhd(173): signal "vfp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at eee308.vhd(173): signal "vsp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at eee308.vhd(173): signal "vbp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at eee308.vhd(173): signal "vva" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 173
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(174): used initial value expression for variable "sec_image_hstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 174
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(175): used initial value expression for variable "sec_image_hstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 175
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(176): used initial value expression for variable "sec_image_vstart" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 176
+Warning (10542): VHDL Variable Declaration warning at eee308.vhd(177): used initial value expression for variable "sec_image_vstop" because variable was never assigned a value File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 177
+Info (12128): Elaborating entity "sync_clk" for hierarchy "sync_clk:disp_clk" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 111
 Info (12128): Elaborating entity "altpll" for hierarchy "sync_clk:disp_clk|altpll:altpll_component" File: C:/intelFPGA_lite/eee308/sync_clk.vhd Line: 133
 Info (12130): Elaborated megafunction instantiation "sync_clk:disp_clk|altpll:altpll_component" File: C:/intelFPGA_lite/eee308/sync_clk.vhd Line: 133
 Info (12133): Instantiated megafunction "sync_clk:disp_clk|altpll:altpll_component" with the following parameter: File: C:/intelFPGA_lite/eee308/sync_clk.vhd Line: 133
@@ -1343,7 +1346,7 @@ Info (12133): Instantiated megafunction "sync_clk:disp_clk|altpll:altpll_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/sync_clk_altpll.v
     Info (12023): Found entity 1: sync_clk_altpll File: C:/intelFPGA_lite/eee308/db/sync_clk_altpll.v Line: 29
 Info (12128): Elaborating entity "sync_clk_altpll" for hierarchy "sync_clk:disp_clk|altpll:altpll_component|sync_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "image_clock" for hierarchy "image_clock:imRead_clk" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 101
+Info (12128): Elaborating entity "image_clock" for hierarchy "image_clock:imRead_clk" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 114
 Info (12128): Elaborating entity "altsyncram" for hierarchy "image_clock:imRead_clk|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/image_clock.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "image_clock:imRead_clk|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/image_clock.vhd Line: 59
 Info (12133): Instantiated megafunction "image_clock:imRead_clk|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/eee308/image_clock.vhd Line: 59
@@ -1406,7 +1409,7 @@ Info (12128): Elaborating entity "decode_aj9" for hierarchy "image_clock:imRead_
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_c3b.tdf
     Info (12023): Found entity 1: mux_c3b File: C:/intelFPGA_lite/eee308/db/mux_c3b.tdf Line: 22
 Info (12128): Elaborating entity "mux_c3b" for hierarchy "image_clock:imRead_clk|altsyncram:altsyncram_component|altsyncram_0mr3:auto_generated|mux_c3b:mux2" File: C:/intelFPGA_lite/eee308/db/altsyncram_0mr3.tdf Line: 41
-Info (12128): Elaborating entity "seconds_hand" for hierarchy "seconds_hand:imRead_sec" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 105
+Info (12128): Elaborating entity "seconds_hand" for hierarchy "seconds_hand:imRead_sec" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 118
 Info (12128): Elaborating entity "altsyncram" for hierarchy "seconds_hand:imRead_sec|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/seconds_hand.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "seconds_hand:imRead_sec|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/seconds_hand.vhd Line: 59
 Info (12133): Instantiated megafunction "seconds_hand:imRead_sec|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/eee308/seconds_hand.vhd Line: 59
@@ -1463,7 +1466,7 @@ Info (12133): Instantiated megafunction "seconds_hand:imRead_sec|altsyncram:alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_99r3.tdf
     Info (12023): Found entity 1: altsyncram_99r3 File: C:/intelFPGA_lite/eee308/db/altsyncram_99r3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_99r3" for hierarchy "seconds_hand:imRead_sec|altsyncram:altsyncram_component|altsyncram_99r3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "minutes_hand" for hierarchy "minutes_hand:imRead_min" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 109
+Info (12128): Elaborating entity "minutes_hand" for hierarchy "minutes_hand:imRead_min" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 122
 Info (12128): Elaborating entity "altsyncram" for hierarchy "minutes_hand:imRead_min|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/minutes_hand.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "minutes_hand:imRead_min|altsyncram:altsyncram_component" File: C:/intelFPGA_lite/eee308/minutes_hand.vhd Line: 59
 Info (12133): Instantiated megafunction "minutes_hand:imRead_min|altsyncram:altsyncram_component" with the following parameter: File: C:/intelFPGA_lite/eee308/minutes_hand.vhd Line: 59
@@ -1521,9 +1524,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_b9r3 File: C:/intelFPGA_lite/eee308/db/altsyncram_b9r3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_b9r3" for hierarchy "minutes_hand:imRead_min|altsyncram:altsyncram_component|altsyncram_b9r3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 226
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 226
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 226
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 239
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 239
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 239
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "9"
     Info (12134): Parameter "LPM_WIDTHP" = "25"
@@ -1557,8 +1560,8 @@ Info (21057): Implemented 538 device resources after synthesis - the final resou
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
     Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Tue Jan 11 00:54:36 2022
-    Info: Elapsed time: 00:00:58
-    Info: Total CPU time (on all processors): 00:01:15
+    Info: Processing ended: Thu Jan 13 12:45:59 2022
+    Info: Elapsed time: 00:01:34
+    Info: Total CPU time (on all processors): 00:01:24
 
 
