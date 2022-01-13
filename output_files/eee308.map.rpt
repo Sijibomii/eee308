@@ -1,5 +1,5 @@
 Analysis & Synthesis report for eee308
-Thu Jan 13 17:17:30 2022
+Thu Jan 13 17:23:46 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -31,32 +31,32 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  23. altpll Parameter Settings by Entity Instance
  24. altsyncram Parameter Settings by Entity Instance
  25. lpm_mult Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c25"
- 27. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c24"
- 28. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c23"
- 29. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c22"
- 30. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c21"
- 31. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c20"
- 32. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c19"
- 33. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c18"
- 34. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c17"
- 35. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c16"
- 36. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c15"
- 37. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c14"
- 38. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c13"
- 39. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c12"
- 40. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c11"
- 41. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c10"
- 42. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c9"
- 43. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c8"
- 44. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c7"
- 45. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c6"
- 46. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c5"
- 47. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c4"
- 48. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c3"
- 49. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c2"
- 50. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c1"
- 51. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c0"
+ 26. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c25"
+ 27. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c24"
+ 28. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c23"
+ 29. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c22"
+ 30. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c21"
+ 31. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c20"
+ 32. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c19"
+ 33. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c18"
+ 34. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c17"
+ 35. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c16"
+ 36. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c15"
+ 37. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c14"
+ 38. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c13"
+ 39. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c12"
+ 40. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c11"
+ 41. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c10"
+ 42. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c9"
+ 43. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c8"
+ 44. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c7"
+ 45. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c6"
+ 46. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c5"
+ 47. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c4"
+ 48. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c3"
+ 49. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c2"
+ 50. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c1"
+ 51. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c0"
  52. Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit"
  53. Port Connectivity Checks: "timer:timer_sec"
  54. Post-Synthesis Netlist Statistics for Top Partition
@@ -87,7 +87,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 13 17:17:30 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 13 17:23:46 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; eee308                                      ;
 ; Top-level Entity Name              ; eee308                                      ;
@@ -219,9 +219,6 @@ refer to the applicable agreement for further details.
 ; eee308.vhd                       ; yes             ; User VHDL File                         ; C:/intelFPGA_lite/eee308/eee308.vhd                                            ;         ;
 ; minutes_hand.vhd                 ; yes             ; User Wizard-Generated File             ; C:/intelFPGA_lite/eee308/minutes_hand.vhd                                      ;         ;
 ; seconds_hand.vhd                 ; yes             ; User Wizard-Generated File             ; C:/intelFPGA_lite/eee308/seconds_hand.vhd                                      ;         ;
-; output_files/timer.vhd           ; yes             ; User VHDL File                         ; C:/intelFPGA_lite/eee308/output_files/timer.vhd                                ;         ;
-; output_files/counter26bit.vhd    ; yes             ; User VHDL File                         ; C:/intelFPGA_lite/eee308/output_files/counter26bit.vhd                         ;         ;
-; output_files/TflipFlop.vhd       ; yes             ; User VHDL File                         ; C:/intelFPGA_lite/eee308/output_files/TflipFlop.vhd                            ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf              ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
@@ -244,6 +241,9 @@ refer to the applicable agreement for further details.
 ; e/hand1e_33x201.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/eee308/e/hand1e_33x201.mif                                   ;         ;
 ; db/altsyncram_b9r3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/intelFPGA_lite/eee308/db/altsyncram_b9r3.tdf                                ;         ;
 ; e/hand3e_40x131.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/intelFPGA_lite/eee308/e/hand3e_40x131.mif                                   ;         ;
+; timer.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/intelFPGA_lite/eee308/timer.vhd                                             ;         ;
+; counter26bit.vhd                 ; yes             ; Auto-Found VHDL File                   ; C:/intelFPGA_lite/eee308/counter26bit.vhd                                      ;         ;
+; tflipflop.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/intelFPGA_lite/eee308/tflipflop.vhd                                         ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
@@ -1195,7 +1195,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c25"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c25"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1204,7 +1204,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c24"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c24"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1213,7 +1213,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c23"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c23"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1222,7 +1222,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c22"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c22"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1231,7 +1231,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c21"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c21"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1240,7 +1240,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c20"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c20"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1249,7 +1249,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c19"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c19"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1258,7 +1258,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c18"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c18"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1267,7 +1267,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c17"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c17"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1276,7 +1276,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c16"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c16"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1285,7 +1285,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c15"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c15"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1294,7 +1294,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c14"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c14"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1303,7 +1303,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c13"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c13"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1312,7 +1312,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c12"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c12"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1321,7 +1321,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c11"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c11"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1330,7 +1330,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c10"                                                         ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c10"                                                         ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1339,7 +1339,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c9"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c9"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1348,7 +1348,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c8"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c8"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1357,7 +1357,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c7"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c7"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1366,7 +1366,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c6"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c6"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1375,7 +1375,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c5"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c5"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1384,7 +1384,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c4"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c4"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1393,7 +1393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c3"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c3"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1402,7 +1402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c2"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c2"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1411,7 +1411,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c1"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c1"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1420,7 +1420,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c0"                                                          ;
+; Port Connectivity Checks: "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c0"                                                          ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity         ; Details                                                                                             ;
 +------+-------+------------------+-----------------------------------------------------------------------------------------------------+
@@ -1480,7 +1480,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1490,7 +1490,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jan 13 17:16:18 2022
+    Info: Processing started: Thu Jan 13 17:22:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off eee308 -c eee308
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1512,15 +1512,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file seconds
 Info (12021): Found 2 design units, including 1 entities, in source file lines.vhd
     Info (12022): Found design unit 1: lines-datapath File: C:/intelFPGA_lite/eee308/lines.vhd Line: 11
     Info (12023): Found entity 1: lines File: C:/intelFPGA_lite/eee308/lines.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/timer.vhd
-    Info (12022): Found design unit 1: timer-Behavioral File: C:/intelFPGA_lite/eee308/output_files/timer.vhd Line: 15
-    Info (12023): Found entity 1: timer File: C:/intelFPGA_lite/eee308/output_files/timer.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/counter26bit.vhd
-    Info (12022): Found design unit 1: Counter26bit-Behavioral File: C:/intelFPGA_lite/eee308/output_files/counter26bit.vhd Line: 14
-    Info (12023): Found entity 1: Counter26bit File: C:/intelFPGA_lite/eee308/output_files/counter26bit.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file output_files/tflipflop.vhd
-    Info (12022): Found design unit 1: TflipFlop-Behavioral File: C:/intelFPGA_lite/eee308/output_files/TflipFlop.vhd Line: 14
-    Info (12023): Found entity 1: TflipFlop File: C:/intelFPGA_lite/eee308/output_files/TflipFlop.vhd Line: 4
+Warning (12019): Can't analyze file -- file output_files/timer.vhd is missing
+Warning (12019): Can't analyze file -- file output_files/counter26bit.vhd is missing
+Warning (12019): Can't analyze file -- file output_files/TflipFlop.vhd is missing
 Info (12127): Elaborating entity "eee308" for the top level hierarchy
 Warning (10639): VHDL warning at eee308.vhd(282): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 282
 Warning (10639): VHDL warning at eee308.vhd(283): constant value overflow File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 283
@@ -1818,9 +1812,18 @@ Info (12133): Instantiated megafunction "minutes_hand:imRead_min|altsyncram:alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b9r3.tdf
     Info (12023): Found entity 1: altsyncram_b9r3 File: C:/intelFPGA_lite/eee308/db/altsyncram_b9r3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_b9r3" for hierarchy "minutes_hand:imRead_min|altsyncram:altsyncram_component|altsyncram_b9r3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (12125): Using design file timer.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: timer-Behavioral File: C:/intelFPGA_lite/eee308/timer.vhd Line: 15
+    Info (12023): Found entity 1: timer File: C:/intelFPGA_lite/eee308/timer.vhd Line: 5
 Info (12128): Elaborating entity "timer" for hierarchy "timer:timer_sec" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 442
-Info (12128): Elaborating entity "Counter26bit" for hierarchy "timer:timer_sec|Counter26bit:c26bit" File: C:/intelFPGA_lite/eee308/output_files/timer.vhd Line: 65
-Info (12128): Elaborating entity "TflipFlop" for hierarchy "timer:timer_sec|Counter26bit:c26bit|TflipFlop:c0" File: C:/intelFPGA_lite/eee308/output_files/counter26bit.vhd Line: 54
+Warning (12125): Using design file counter26bit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: Counter26bit-Behavioral File: C:/intelFPGA_lite/eee308/counter26bit.vhd Line: 14
+    Info (12023): Found entity 1: Counter26bit File: C:/intelFPGA_lite/eee308/counter26bit.vhd Line: 4
+Info (12128): Elaborating entity "Counter26bit" for hierarchy "timer:timer_sec|Counter26bit:c26bit" File: C:/intelFPGA_lite/eee308/timer.vhd Line: 65
+Warning (12125): Using design file tflipflop.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: TflipFlop-Behavioral File: C:/intelFPGA_lite/eee308/tflipflop.vhd Line: 14
+    Info (12023): Found entity 1: TflipFlop File: C:/intelFPGA_lite/eee308/tflipflop.vhd Line: 4
+Info (12128): Elaborating entity "TFlipFlop" for hierarchy "timer:timer_sec|Counter26bit:c26bit|TFlipFlop:c0" File: C:/intelFPGA_lite/eee308/counter26bit.vhd Line: 54
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 384
 Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/intelFPGA_lite/eee308/eee308.vhd Line: 384
@@ -1857,10 +1860,10 @@ Info (21057): Implemented 538 device resources after synthesis - the final resou
     Info (21061): Implemented 390 logic cells
     Info (21064): Implemented 132 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Thu Jan 13 17:17:30 2022
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:01:15
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Thu Jan 13 17:23:46 2022
+    Info: Elapsed time: 00:01:09
+    Info: Total CPU time (on all processors): 00:01:24
 
 
