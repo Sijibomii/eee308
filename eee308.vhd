@@ -49,6 +49,34 @@ architecture display of eee308 is
 	constant vbp480p  : integer   := 33;
 	constant vva480p  : integer   := 480;
 	
+	shared variable  currentSec :integer  := 0;
+	
+	constant ENDING_X : integer := 484;
+	constant ENDING_Y : integer := 305;
+	
+	-------CONSTANT START POINT FOR EACH DEGREE--------------------------------------
+	constant ZERO_x : integer  := 483;
+	constant ZERO_Y : integer  := 205;
+	
+	constant ONE_X : integer  := 485;
+	constant ONE_Y : integer  := 207;
+	
+	constant TWO_X : integer := 487;
+	constant TWO_Y : integer := 209;
+	
+	constant THREE_X : integer := 489;
+	constant THREE_Y : integer := 211;
+	
+---------------------------------------------------------------------------------
+	component timer port
+	(
+		MAX10_CLK1_50	: in std_logic;
+		clk		: out std_logic
+	);
+	end component;
+	
+	signal clr_clk : std_logic; ---seconds 
+	
 --for each second store the starting and ending point of each hand
 ---- STORES THE LIST OF COLORED PIXELS FOR EACH POSITION
 -------------------------TYPES--------------------------------------------------
@@ -63,15 +91,35 @@ architecture display of eee308 is
 	type HR_Y is array (0 to 50) of integer range 0 to 480;
 
 	type RETURN_ARRAY is array (0 to 1) of integer;--0 x, y 1
+	
+---------------------sIGNALS TO HOLD ARRAYS-----------------------------------
+--	signal sSEC_X : SEC_X;
+--	signal sSEC_Y : SEC_Y;
+--	
+--	signal sMIN_X : MIN_X;
+--	signal sMIN_Y : MIN_Y;
+--	
+--	signal sHR_X : HR_X;
+--	signal sHR_Y : HR_Y;
+	
+	shared variable vSEC_X : SEC_X;
+	shared variable vSEC_Y : SEC_Y;
+	
+	shared variable vMIN_X : MIN_X;
+	shared variable vMIN_Y : MIN_Y;
+	
+	shared variable vHR_X : HR_X;
+	shared variable vHR_Y : HR_Y; 
 
 ---------------------FUNCTION---------------------------------------------------
 function getNextCoord(x0 : integer := 0;
                         y0 : integer := 0;
 								x1 : integer := 0;
 								y1 : integer := 0) return RETURN_ARRAY is
-		signal sx_p : integer;
-		signal sy_p : integer;
+		variable sx_p : integer;
+		variable sy_p : integer;
       variable dy: integer;
+		variable dx: integer;
 		variable sx: integer;
 		variable sy: integer;
 		variable err : integer := 0;
@@ -95,29 +143,16 @@ function getNextCoord(x0 : integer := 0;
 		err:= dx+dy;
 		e2 := err+err;
 		if (e2 >= dy) then 
-		sx_p <= x0 + sx;
-		sy_p <= y0;
+		sx_p := x0 + sx;
+		sy_p := y0;
 		end if;
 		if (e2 <= dx) then
-		 sy_p <= y0 + sy;
-		sx_p <= x0;
+		 sy_p := y0 + sy;
+		sx_p := x0;
 		end if;
         return (sx_p, sy_p);
     end function;
 
------------------------------seconds---------------------------------------------------
-	--every one second get the current 
-	--variable CURR: INT_ARRAY(0 to 9);
-
---for I in 0 to 50 loop
---	--check if I is one
---	if (I = 1) then
---	
---	else
---	end if;
---end loop;
-	
-	
 
 -- Signals that will hold the front port etc that we will acutally use
 	signal   hfp      : integer; -- horizontal front porch
@@ -188,6 +223,58 @@ begin
 --	imRead_hr: work.hour_hand port map(address => data_address, ----hour hand
 --                                  clock    => sync2_clk,
 --                                  q        => raw_data_hr);
+
+	dig_counter : process (clr_clk)
+--	variable vSEC_X : SEC_X;
+--	variable vSEC_Y : SEC_Y;
+--	
+--	variable vMIN_X : MIN_X;
+--	variable vMIN_Y : MIN_Y;
+--	
+--	variable vHR_X : HR_X;
+--	variable vHR_Y : HR_Y; 
+	variable store : RETURN_ARRAY;
+	begin
+	if clr_clk'event and clr_clk = '0' then
+	
+		if (currentSec > 60) then
+			currentSec := 0;
+		end if;
+	
+	--call function here to calc array
+		-- calculate seconds first
+		
+		--check if I is one
+			case(currentSec) is 
+			when 0 => 
+			--calculate the array of x and y
+			--insert the starting point first
+			vSEC_X(0) := ONE_X;
+			vSEC_Y(0) := ONE_Y;
+			for I in 1 to 50 loop
+				store := getNextCoord(x0 => ONE_X, y0 => ONE_Y, x1 => ENDING_X, y1 => ENDING_Y);
+				vSEC_X(I) := store(0);
+				vSEC_Y(I) := store(1);
+			end loop;
+--			when "01" => HEX3<= "10000110"; HEX2<="11111001"; 
+--			HEX1<="11000000"; HEX0<="10100001";
+--			when "10" => HEX3<= "11111001"; HEX2<="11000000"; 
+--			HEX1<="10100001"; HEX0<="10000110";
+--			when "11" => HEX3<= "11000000"; HEX2<="10100001"; 
+--			HEX1<="10000110"; HEX0<="11111001";
+		when others =>
+			vSEC_X(0) := ONE_X;
+			vSEC_Y(0) := ONE_Y;
+			for I in 1 to 50 loop
+				store := getNextCoord(x0 => ONE_X, y0 => ONE_Y, x1 => ENDING_X, y1 => ENDING_Y);
+				vSEC_X(I) := store(0);
+				vSEC_Y(I) := store(1);
+			end loop;
+	end case;
+	
+	end if;
+	end process;
+
 											 
 	process(sync2_clk)
 	
@@ -352,4 +439,5 @@ begin
 					end if;
 		end if;
 	end process;
+	timer_sec : timer port map ( clk50MHz , clr_clk);
 end architecture display;
