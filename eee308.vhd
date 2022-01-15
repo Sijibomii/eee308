@@ -49,20 +49,20 @@ architecture display of eee308 is
 	constant vbp480p  : integer   := 33;
 	constant vva480p  : integer   := 480;
 	
-	shared variable  currentSec :integer  := 0;
+	shared variable  currentSec :integer  := -1;
 	
 	constant ENDING_X : integer := 484;
-	constant ENDING_Y : integer := 305;
+	constant ENDING_Y : integer := 245;
 	
 	-------CONSTANT START POINT FOR EACH DEGREE--------------------------------------
 	constant ZERO_x : integer  := 483;
 	constant ZERO_Y : integer  := 205;
 	
-	constant ONE_X : integer  := 485;
-	constant ONE_Y : integer  := 207;
+	constant ONE_X : integer  := 489;
+	constant ONE_Y : integer  := 212;
 	
-	constant TWO_X : integer := 487;
-	constant TWO_Y : integer := 209;
+	constant TWO_X : integer := 494;
+	constant TWO_Y : integer := 220;
 	
 	constant THREE_X : integer := 489;
 	constant THREE_Y : integer := 211;
@@ -110,6 +110,9 @@ architecture display of eee308 is
 	
 	shared variable vHR_X : HR_X;
 	shared variable vHR_Y : HR_Y; 
+	
+	shared variable currX0 : integer;
+	shared variable currY0 : integer;
 
 ---------------------FUNCTION---------------------------------------------------
 function getNextCoord(x0 : integer := 0;
@@ -128,10 +131,10 @@ function getNextCoord(x0 : integer := 0;
         if x1-x0 > 0 then
 			dx := x1-x0;
 			sx := 1;
-		else
-			dx := x0-x1;
-			sx := -1;
-		end if;
+			else
+				dx := x0-x1;
+				sx := -1;
+			end if;
 		
 		if y1-y0 > 0 then
 			dy := y1-y0;
@@ -142,14 +145,15 @@ function getNextCoord(x0 : integer := 0;
 		end if;
 		err:= dx+dy;
 		e2 := err+err;
+		
 		if (e2 >= dy) then 
 		sx_p := x0 + sx;
 		sy_p := y0;
-		end if;
-		if (e2 <= dx) then
+		elsif (e2 <= dx) then
 		 sy_p := y0 + sy;
-		sx_p := x0;
+		 sx_p := x0;
 		end if;
+		
         return (sx_p, sy_p);
     end function;
 
@@ -224,7 +228,7 @@ begin
 --                                  clock    => sync2_clk,
 --                                  q        => raw_data_hr);
 
-	dig_counter : process (clr_clk)
+	dig_counter : process (clr_clk, sync2_clk)
 --	variable vSEC_X : SEC_X;
 --	variable vSEC_Y : SEC_Y;
 --	
@@ -234,49 +238,6 @@ begin
 --	variable vHR_X : HR_X;
 --	variable vHR_Y : HR_Y; 
 	variable store : RETURN_ARRAY;
-	begin
-	if clr_clk'event and clr_clk = '0' then
-	
-		if (currentSec > 60) then
-			currentSec := 0;
-		end if;
-	
-	--call function here to calc array
-		-- calculate seconds first
-		
-		--check if I is one
-			case(currentSec) is 
-			when 0 => 
-			--calculate the array of x and y
-			--insert the starting point first
-			vSEC_X(0) := ONE_X;
-			vSEC_Y(0) := ONE_Y;
-			for I in 1 to 50 loop
-				store := getNextCoord(x0 => ONE_X, y0 => ONE_Y, x1 => ENDING_X, y1 => ENDING_Y);
-				vSEC_X(I) := store(0);
-				vSEC_Y(I) := store(1);
-			end loop;
---			when "01" => HEX3<= "10000110"; HEX2<="11111001"; 
---			HEX1<="11000000"; HEX0<="10100001";
---			when "10" => HEX3<= "11111001"; HEX2<="11000000"; 
---			HEX1<="10100001"; HEX0<="10000110";
---			when "11" => HEX3<= "11000000"; HEX2<="10100001"; 
---			HEX1<="10000110"; HEX0<="11111001";
-		when others =>
-			vSEC_X(0) := ONE_X;
-			vSEC_Y(0) := ONE_Y;
-			for I in 1 to 50 loop
-				store := getNextCoord(x0 => ONE_X, y0 => ONE_Y, x1 => ENDING_X, y1 => ENDING_Y);
-				vSEC_X(I) := store(0);
-				vSEC_Y(I) := store(1);
-			end loop;
-	end case;
-	
-	end if;
-	end process;
-
-											 
-	process(sync2_clk)
 	
 	--clock positining details
 	variable hcentre            : integer := hfp + hsp + hbp + (hva/2);
@@ -332,6 +293,62 @@ begin
 	--	variable imgOffset          : integer := 4;
 	variable increx1  : integer := 1;
 	begin
+	
+	if clr_clk'event and clr_clk = '0' then
+		currentSec := currentSec + 1;
+		if (currentSec > 60) then
+			currentSec := 0;
+		end if;
+	
+	--call function here to calc array
+		-- calculate seconds first
+		
+		--check if I is one
+			case(currentSec) is 
+			when 0 => 
+			--calculate the array of x and y
+			--insert the starting point first
+--			vSEC_X(0) := ONE_X;
+--			vSEC_Y(0) := ONE_Y;
+			for I in 0 to 50 loop
+				if (I = 1) then
+					store := getNextCoord(x0 => ZERO_X, y0 => ZERO_Y, x1 => ENDING_X, y1 => ENDING_Y);
+					currX0 :=  store(0);
+					currY0 :=  store(1);
+					vSEC_X(I) :=  store(0);
+					vSEC_Y(I) :=  store(1);
+--					currentSec := currentSec + 1;
+				else
+				store := getNextCoord(x0 => currX0, y0 => currY0, x1 => ENDING_X, y1 => ENDING_Y);
+				currX0 :=  store(0);
+				currY0 :=  store(1);
+				vSEC_X(I) :=  store(0);
+				vSEC_Y(I) :=  store(1);
+--				currentSec := currentSec + 1;
+				end if;
+			end loop;
+--			when "01" => HEX3<= "10000110"; HEX2<="11111001"; 
+--			HEX1<="11000000"; HEX0<="10100001";
+--			when "10" => HEX3<= "11111001"; HEX2<="11000000"; 
+--			HEX1<="10100001"; HEX0<="10000110";
+--			when "11" => HEX3<= "11000000"; HEX2<="10100001"; 
+--			HEX1<="10000110"; HEX0<="11111001";
+		when others =>
+			vSEC_X(0) := ONE_X;
+			vSEC_Y(0) := ONE_Y;
+			for I in 1 to 50 loop
+				store := getNextCoord(x0 => ONE_X, y0 => ONE_Y, x1 => ENDING_X, y1 => ENDING_Y);
+				vSEC_X(I) := store(0);
+				vSEC_Y(I) := store(1);
+			end loop;
+	end case;
+	
+	end if;
+--	end process;
+
+											
+	
+--	begin
 	if rising_edge(sync2_clk) then
 			-- Always increment the horizontal position counter with each active clock pulse
 			hposition <= hposition + 1;
@@ -396,17 +413,17 @@ begin
 --each second, generate array of all pixel that should be coloured black
 ------------------------------hour hand ----------------------------------------------------
 
-		if ((hposition >= hr_image_hstart and hposition <= hr_image_hstop) and (vposition >= hr_image_vstart and vposition <= hr_image_vstop)) then
-					hr_image_pixel_col := hposition - hr_image_hstart;
-					hr_image_pixel_row := vposition - hr_image_vstart;
-					hr_image_pixel_number := hr_image_pixel_col + hr_image_pixel_row*hour_hand_image_Width;
-					mem_Address_hr  := to_unsigned(hr_image_pixel_number, mem_Address_hr'length);
-					data_address2 <= std_logic_vector(mem_Address_hr);
-					r <= raw_data_hr(11 downto 8);
-					g <= raw_data_hr(7 downto 4);
-					b <= raw_data_hr(3 downto 0);
-													 
-					end if;
+--		if ((hposition >= hr_image_hstart and hposition <= hr_image_hstop) and (vposition >= hr_image_vstart and vposition <= hr_image_vstop)) then
+--					hr_image_pixel_col := hposition - hr_image_hstart;
+--					hr_image_pixel_row := vposition - hr_image_vstart;
+--					hr_image_pixel_number := hr_image_pixel_col + hr_image_pixel_row*hour_hand_image_Width;
+--					mem_Address_hr  := to_unsigned(hr_image_pixel_number, mem_Address_hr'length);
+--					data_address2 <= std_logic_vector(mem_Address_hr);
+--					r <= raw_data_hr(11 downto 8);
+--					g <= raw_data_hr(7 downto 4);
+--					b <= raw_data_hr(3 downto 0);
+--													 
+--					end if;
 ------------------------------minute hand------------------------------------------
 
 	if ((hposition >= min_image_hstart and hposition <= min_image_hstop) and (vposition >= min_image_vstart and vposition <= min_image_vstop)) then
@@ -426,17 +443,28 @@ begin
 													 
 					end if;
 -----------------------------seconds hand------------------------------------------------
-		if ((hposition >= sec_image_hstart and hposition <= sec_image_hstop) and (vposition >= sec_image_vstart and vposition <= sec_image_vstop)) then
-					sec_image_pixel_col := hposition - sec_image_hstart;
-					sec_image_pixel_row := vposition - sec_image_vstart;
-					sec_image_pixel_number := sec_image_pixel_col + sec_image_pixel_row*sec_hand_image_Width;
-					mem_Address_sec  := to_unsigned(sec_image_pixel_number, mem_Address_sec'length);
-					data_address2 <= std_logic_vector(mem_Address_sec);
-					r <= raw_data_sec(11 downto 8);
-					g <= raw_data_sec(7 downto 4);
-					b <= raw_data_sec(3 downto 0);
-													 
-					end if;
+--		if ((hposition >= sec_image_hstart and hposition <= sec_image_hstop) and (vposition >= sec_image_vstart and vposition <= sec_image_vstop)) then
+--					sec_image_pixel_col := hposition - sec_image_hstart;
+--					sec_image_pixel_row := vposition - sec_image_vstart;
+--					sec_image_pixel_number := sec_image_pixel_col + sec_image_pixel_row*sec_hand_image_Width;
+--					mem_Address_sec  := to_unsigned(sec_image_pixel_number, mem_Address_sec'length);
+--					data_address2 <= std_logic_vector(mem_Address_sec);
+--					r <= raw_data_sec(11 downto 8);
+--					g <= raw_data_sec(7 downto 4);
+--					b <= raw_data_sec(3 downto 0);
+--													 
+--					end if;
+	
+		for I in 0 to 50 loop
+				if (vSEC_X(I) = hposition) and (vSEC_Y(I) = vposition)  then
+					--color it black 
+					r <= x"2";
+					g <= x"2";
+					b <= x"2";
+					--exit;
+				end if;
+		end loop;
+	
 		end if;
 	end process;
 	timer_sec : timer port map ( clk50MHz , clr_clk);

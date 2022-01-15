@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Thu Jan 13 17:23:46 2022
+Analysis & Synthesis Status : Successful - Sat Jan 15 17:52:14 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : eee308
 Top-level Entity Name : eee308
 Family : MAX 10
-Total logic elements : 390
-    Total combinational functions : 384
-    Dedicated logic registers : 113
-Total registers : 113
+Total logic elements : 448
+    Total combinational functions : 441
+    Dedicated logic registers : 179
+Total registers : 179
 Total pins : 15
 Total virtual pins : 0
-Total memory bits : 1,081,344
+Total memory bits : 884,736
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1
 UFM blocks : 0
